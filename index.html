@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkonet Global Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+          padding-top: 56px; 
+        }
+
+        /* navbar css */
+        .navbar {
+          position: relative;
+        }
+        .navbar.fixed-top {
+          position: fixed;
+          width: 100%;
+          z-index: 1000;
+        }
+        .blue-strip {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          background-color: blue;
+        }
+        .navbar-nav .nav-item:hover .nav-link {
+          color: blue;
+          text-decoration: underline;
+          /* transition: color 0.3s ease-in; */
+        }
+
+        /* section-one-css */
+        .section-one {
+          position: relative;
+          overflow: visible;
+        }
+        /* .container-fluid video{
+            position: relative;
+            overflow: visible;
+        } */
+
+        .img-fluid{
+          width: 100%;
+          height: auto;
+          top: 0;
+          left: 0;
+        }
+
+    .absolute-textbox {
+      position: absolute;
+      /* margin-top: 5px; */
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(30, 26, 26, 0.605);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: aliceblue;
+      max-width: 80%;
+      width: 1000px;
+      height: 300px;
+  }
+  .read-more-btn {
+      position: absolute;
+      /* bottom: 15px; */
+      top:40%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: rgba(30, 26, 26, 0.605); /* Bootstrap's primary color */
+      color: aliceblue; /* Text color */
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    /* section-two */
+
+    .section-two {
+      /* background-color: #f8f9fa; Light gray background color */
+      /* padding: 50px 0; Adjust padding as needed */
+      position: relative; 
+      overflow: visible;
+    } 
+    .container2 img{
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .second-textbox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(30, 26, 26, 0.605);
+      color: aliceblue;
+      padding: 20px;
+      /* border-radius: 8px; */
+      text-align: center;
+      max-width: 80%; 
+      width: 1000px;
+    }
+
+    .read-more-btn:hover {
+      background-color: #0056b3; /* Darker shade on hover */
+    }
+    @media (max-width: 768px) {
+      .absolute-textbox {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .absolute-textbox {
+        max-width: 100%;
+        padding: 15px;
+      }
+    }
+
+    /* second section  */
+    @media (max-width: 768px) {
+      .second-textbox {
+        max-width: 90%;
+      }
+    }
+
+    
+    @media (max-width: 576px) {
+      .second-textbox {
+        max-width: 100%;
+        padding: 10px;
+      }
+    }
+
+    /* third section */
+    @media (max-width: 768px) {
+      .third-textbox {
+        max-width: 90%;
+      }
+    }
+
+    
+    @media (max-width: 576px) {
+      .third-textbox {
+        max-width: 100%;
+        padding: 10px;
+      }
+    }
+
+    /* section three */
+    .section-three {
+      /* background-color: #f8f9fa; Light gray background color */
+      /* padding: 50px 0; Adjust padding as needed */
+      position: relative; 
+      overflow: hidden;
+    } 
+    .container3 img{
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+    .third-textbox {
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(30, 26, 26, 0.605);
+      color: aliceblue;
+      padding: 20px;
+      /* border-radius: 8px; */
+      text-align: center;
+      max-width: 80%; 
+      width: 1000px;
+    }
+
+    /* css for footer */
+    .heading-bottom{
+    width: 18%;
+margin: auto;
+border-top: 4px solid #ef1923;
+opacity: unset;
+border-radius: 10px;
+margin-bottom: 50px;
+}
+    .page-head {
+padding: 180px 0 0 0;
+color: white;
+font-size: 49px;
+margin-bottom: 0px;
+}
+.breadcrumb {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 23px 1rem;
+margin-bottom: 0;
+list-style: none;
+}
+.breadcrumb-item.active {
+color: white;
+}
+.breadcrumb-item {
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+}
+.breadcrumb-item a {
+color: #fff;
+}
+.breadcrumb-item .fa-home {
+margin-right: 5px;
+}
+.footer-text p {
+color: #fff;
+line-height: 25px;
+margin-top: 23px;
+}
+.icon1{
+margin-top: 12px;
+margin-bottom: 14px;
+}
+.line1{
+white-space: nowrap;
+}
+
+.iframe1{
+        border: 5px solid #97314a !IMPORTANT;
+border-radius: 20px;
+margin-top: 20px;
+}
+.quick-link-box, .footer-social-icon{    margin-left: 50px;}
+.footer-social-icon .social_icon {
+text-align: left;
+}
+.footer-social-icon .social_icon li {
+float: inherit !important;
+display: inline-block !important;
+width: inherit;
+}
+.footer-social-icon .social_icon li a i {
+font-size: 15px !important;
+line-height: 39px;
+}
+.footer-social-icon .social_icon li a {
+width: 40px;
+height: 40px;
+}
+
+.social_icon {
+text-align: right;
+margin: 0;
+margin-top: 3px;
+}
+.social_icon li {
+display: inline-block;
+margin: 0 5px;
+}
+.social_icon li a {
+display: inline-block;
+width: 25px;
+height: 25px;
+background: #000000;
+color: #f3f7f7;
+text-align: center;
+border-radius: 100%;
+transition: 0.2s ease-in-out;
+}
+.social_icon li a i {
+font-size: 15px;
+line-height: 20px;
+}
+.social_icon li:nth-child(1) a {
+background: #4267b2;
+color: #fff;
+}
+.social_icon li:nth-child(2) a {
+background: #1da1f2;
+color: #fff;
+}
+.social_icon li:nth-child(3) a {
+background: #f09433;
+background: -moz-linear-gradient(
+45deg,
+#f09433 0%,
+#e6683c 25%,
+#dc2743 50%,
+#cc2366 75%,
+#bc1888 100%
+);
+background: -webkit-linear-gradient(
+45deg,
+#f09433 0%,
+#e6683c 25%,
+#dc2743 50%,
+#cc2366 75%,
+#bc1888 100%
+);
+background: linear-gradient(
+45deg,
+#f09433 0%,
+#e6683c 25%,
+#dc2743 50%,
+#cc2366 75%,
+#bc1888 100%
+);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+color: #fff;
+}
+.social_icon li:nth-child(4) a {
+background: #ff0000;
+color: #fff;
+}
+.social_icon li:nth-child(1):hover a {
+background: #fff;
+color: #4267b2;
+}
+.social_icon li:nth-child(2):hover a {
+background: #fff;
+color: #1da1f2;
+}
+.social_icon li:nth-child(3):hover a {
+background: #fff;
+color: #bc1888;
+}
+.social_icon li:nth-child(4):hover a {
+background: #fff;
+color: #ff0000;
+}
+
+
+.footer-text p{color:#fff; line-height:25px;}
+.quick-links-list a{color:#fff;}
+.footer-menu1{justify-content:end;display:flex;}
+@media only screen and (max-width: 767px) {
+    .first-sub-menu .active{
+color:#ef1924 !important;
+}
+.second-sub-menu .active{
+color:#ef1924 !important;
+}
+    .footer-padding {
+padding: 10px 0;
+}
+    .iframe1 {
+border-radius: 7px;
+margin-top: 10px;
+width: 100%;
+}
+.main-header.fixed-header .header-upper
+{
+background: #fff;
+}
+.section-sec {
+display: none;
+}
+.img-1 {
+line-height: 23px;
+}
+.main-menu .navbar-collapse li a {
+color: #fff;
+}
+.quick-link-box, .footer-social-icon {
+margin-left: 5px;
+}
+.base-footer-pad-MV{
+text-align: center;
+font-size: 17px !IMPORTANT;
+}
+.footer-menu1 {
+justify-content: center;
+display: flex;
+}
+}
+
+      </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+        <div class="blue-strip"></div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="images/arkonet-logo1.png" alt="Arkonet" width="250" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About ARKONET</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products & Solutions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- section-one -->
+     <section class="section-one">
+  <div class="container-fluid">
+    <video autoplay loop muted playsinline preload="auto" class="img-fluid">
+      <source src="Videos/arkonate1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute-textbox">
+      <h1 class="display-4">Drive Your Digital Transformation with Our Expertise – Your Proven Partner!</h1>
+      <!-- You can add additional elements inside the textbox -->
+      <p class="lead">WE PROVIDE STATE-OF-THE-ART DIGITAL INNOVATIONS LEVERAGING OUR TECH KNOW-HOW AND EXTENSIVE INDUSTRY EXPERIENCE, TO ENSURE YOUR JOURNEY AHEAD IS THE BEST IT CAN BE.</p>
+    </div>
+    <!-- <a href="#" class="read-more-btn">Read More</a> -->
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (optional) for Bootstrap components that require JavaScript -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</section>
+
+<section class="section-two">
+    <div class="container2">
+      <!-- <img src="https://source.unsplash.com/900x450/?technology" alt="techimg" class="img-fluid"> -->
+      <img src="images\360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg" alt="techimage" class="img-fluid rounded second-image">
+      <div class="second-textbox">
+        <h2>We Enable Digital Transformation</h2>
+        <p>At ARKONET, we're dedicated to helping businesses achieve successful digital transformation. We offer strategic guidance, advanced technology, customized solutions, data-driven insights, partnerships, continuous improvement, education, and unwavering support to drive change within the ARKONET ecosystem.</p>
+        <!-- Add additional content as needed -->
+      </div>
+    </div>
+  </section>
+      
+
+  <section class="section-three">
+    <div class="container3">
+      <!-- <img src="https://source.unsplash.com/900x450/?technology" alt="techimg" class="img-fluid"> -->
+      <img src="images\360_F_415051913_5QjupjD2soUYXLo0o81OIndnkx2OD8k9.jpg" alt="techimage" class="img-fluid rounded second-image">
+      <div class="third-textbox">
+        <h2>We Enable Digital Transformation</h2>
+        <p>At ARKONET, we're dedicated to helping businesses achieve successful digital transformation. We offer strategic guidance, advanced technology, customized solutions, data-driven insights, partnerships, continuous improvement, education, and unwavering support to drive change within the ARKONET ecosystem.</p>
+        <!-- Add additional content as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <!-- footer -->
+<section class="p-3 footer-bg bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <a href="index" class="tcs-section-click"> <img class="img-fluid" src="images/arkonet-logo.png"
+                        alt="Arkonet logo">
+                </a>
+                <div class="footer-text">
+                    <p>At ARKONET, we're more than just a digital platform – we're your trusted partner in the world of Finance and Accounting Management.</p>
+                                  <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
+                              </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <div class="quick-link-box">
+                    <h6 class="footer-title">
+                        <a class="desktop-footer-section-title">Quick Links <span class="ml-5"></span></a>
+  
+                    </h6>
+                    <ul class="quick-links">
+  
+  
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="about-us">About ARKONET</a>
+                        </li>
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="contact-us">Contact Us</a>
+                        </li>
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="our-services">Our Services</a>
+                        </li>
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="products">Taxko</a>
+                        </li>
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="helpdesk">HelpDesk</a>
+                        </li>
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="blogs">Blogs</a>
+                        </li>
+  
+  
+  
+  
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click" href="#">News and Updates</a>
+                        </li>
+  
+  
+                    </ul>
+                    
+                </div>
+            </div>
+          
+            <div class="col-6 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <div class="quick-link-box">
+                    <h6 class="footer-title">
+                        <a class="desktop-footer-section-title">Contact Us</a>
+  
+                    </h6>
+                    <ul class="quick-links">
+  
+  
+                        <li class="quick-links-list">
+                                <a href="mailto:info@arkonetglobal.com"><i class="fa fa-envelope"></i> &nbsp;&nbsp; info@arkonetglobal.com</a>
+                                <!-- contact@arkonetglobal.com -->
+                        </li>
+  
+                
+  
+  
+                        <li class="quick-links-list">
+                            <a class="quick-links-list-items  tcs-section-click hover-none"
+                                href="tel:++91-9404740322"><i class="fa fa-mobile-phone" style="font-size:25px"></i>&nbsp;&nbsp;  +91-9404740322</a>
+                        </li>
+  
+  
+                    </ul>
+                </div>
+                <div class="footer-social-icon">
+    <!-- <span>Follow us</span> -->
+    <h6 class="footer-title icon1">
+                        <a class="desktop-footer-section-title">Follow us</a>
+  
+                    </h6>
+    <ul class="social_icon">
+    <li class="social-icn-ul-list"><a class="social-icn-item tcs-section-click"
+                            href="https://www.facebook.com/arkonetglobal" target="_blank"><i
+                                class="fa fa-facebook ml-5 mr-5" aria-hidden="true"></i></a>
+                    </li>
+                  
+                    <li class="social-icn-ul-list"><a class="social-icn-item tcs-section-click"
+                            href="https://uk.linkedin.com/company/arkonetglobal" target="_blank"><i 
+                            class="fa fa-linkedin-square ml-5 mr-5" aria-hidden="true"></i></a>
+                    </li>
+  
+                    <li class="social-icn-ul-list"><a class="social-icn-item tcs-section-click"
+                            href="https://instagram.com/arkonetglobal?igshid=YmMyMTA2M2Y=" target="_blank"><i
+                                class="fa fa-instagram ml-5 mr-5" aria-hidden="true"></i></a>
+                    </li>
+                    
+    </ul>
+  </div>
+            </div>
+  
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+  
+        <h6 class="footer-title">
+                        <a class="desktop-footer-section-title">Location</a>
+  
+                    </h6>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.4056949935434!2d74.23990207696836!3d16.706597403866294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1012292d39783%3A0x817c1a1da55d15f6!2sARKONET%20GLOBAL!5e0!3m2!1sen!2sin!4v1698480061370!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe1"></iframe>
+               
+            </div>
+        </div>
+  
+    </div>
+  </section>
+  
+  <section class="bg-black color-white footer-padding">
+  
+      <div class="container" style="color: aliceblue;">
+          <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div class="base-footer-pad-MV text-left-mob mt-2">
+                      <span class="link-content line1"> ©2024 ARKONET. All Rights Reserved</span>
+                  </div>
+              </div>
+              <div class="col-lg-9 col-md-5 footer-menu1 col-sm-12 col-xs-12">
+                  <ul class="d-flex ">
+  
+  
+  
+                      <li class="base-footer-tcs-lnks-ul-list">
+                          <a class="base-footer-tcs-lnks-ul-list-item tcs-section-click ml-5 mr-5" href="privacy-policy">Privacy
+                              Policy</a>
+                      </li>
+  
+  
+  
+  
+  
+                  </ul>
+  
+              </div>
+  
+          </div>
+  
+      </div>
+  </section>
+  
+  
+  </body>
+  </html>
+  
+  
+</body>
+</html>
